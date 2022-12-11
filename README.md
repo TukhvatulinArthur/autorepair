@@ -30,4 +30,4 @@ Figma:
     
 GitHub Pages: 
 
-   [https://tukhvatulinarthur.github.io/autorepair/dist/index.html](https://tukhvatulinarthur.github.io/autorepair/dist/index.html)
+   [https://one-ess.github.io/autorepair/dist/index.html](https://one-ess.github.io/autorepair/dist/index.html)
