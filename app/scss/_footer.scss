@@ -1,0 +1,27 @@
+.footer {
+  background-image: url(../images/footer-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  text-align: center;
+  padding: 40px 0;
+
+  &__address {
+    font-size: 42px;
+    line-height: 50px;
+    margin-bottom: 20px;
+
+    span {
+      display: block;
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 30px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__phone {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}

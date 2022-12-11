@@ -1,0 +1,215 @@
+.header {
+  background-image: url(../images/header-bg.webp);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 10px;
+    flex-wrap: wrap;
+    row-gap: 20px;
+
+    @media (max-width: 462px) {
+      justify-content: center;
+      row-gap: 15px;
+      padding-bottom: 60px;
+    }
+  }
+
+  &__top-column {
+    &:first-child {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      @media (max-width: 462px) {
+        align-items: center;
+      }
+    }
+    &:last-child {
+      text-align: right;
+
+      @media (max-width: 760px) {
+        text-align: left;
+      }
+
+      @media (max-width: 462px) {
+        text-align: center;
+      }
+    }
+
+    &:nth-child(2) {
+      flex: 0 1 150px;
+      text-align: center;
+
+      @media (max-width: 462px) {
+        order: 1;
+      }
+    }
+  }
+
+  &__email {
+    margin-top: 10px;
+    line-height: 24px;
+    font-weight: 300;
+    display: block;
+    @media (max-width: 462px) {
+      text-align: center;
+    }
+  }
+
+  &__social {
+    &:first-child {
+      margin-right: 42px;
+    }
+  }
+
+  &__phone {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 21px;
+    transition: all 0.4s;
+    @media (max-width: 760px) {
+      margin-bottom: 5px;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #910000;
+      }
+    }
+  }
+
+  &__address {
+    font-weight: 300;
+    line-height: 24px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    max-width: 828px;
+    margin: 0 auto;
+    margin-bottom: 340px;
+
+    @media (max-width: 768px) {
+      text-align: center;
+      margin-bottom: 150px;
+      line-height: 30px;
+    }
+
+    span {
+      @include adaptiveValue("font-size", 95, 45, 1);
+
+      &:first-child,
+      &:nth-child(3) {
+        @include adaptiveValue("line-height", 82, 48, 1);
+        font-family: "GolosText";
+      }
+
+      &:nth-child(2) {
+        max-width: 400px;
+        text-align: right;
+        display: inline-block;
+        font-weight: 500;
+        @include adaptiveValue("font-size", 31, 16, 1);
+
+        @media (max-width: 720px) {
+          text-align: center;
+          line-height: 25px;
+        }
+      }
+
+      &:last-child {
+        margin-left: 410px;
+        text-transform: lowercase;
+        @include adaptiveValue("font-size", 34, 24, 1);
+        font-weight: 600;
+
+        @media (max-width: 768px) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 950px;
+    padding-bottom: 50px;
+    flex-wrap: wrap;
+
+    @media (max-width: $md2) {
+      justify-content: center;
+      gap: 30px;
+    }
+    @media (max-width: 768px) {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__bottom-text {
+    flex: 0 1 300px;
+
+    @media (max-width: 859px) {
+      text-align: center;
+    }
+
+    span {
+      &:first-child {
+        font-size: 35px;
+        line-height: 42px;
+      }
+
+      &:nth-child(2) {
+        transform: rotate(-90deg) translate(-100%, 0);
+        transform-origin: left top;
+        display: inline-block;
+        font-size: 35px;
+        position: relative;
+        left: 0;
+        top: -25px;
+      }
+
+      &:nth-child(3) {
+        @include adaptiveValue("font-size", 80, 50, 1);
+        @include adaptiveValue("line-height", 96, 80, 1);
+      }
+
+      &:last-child {
+        font-size: 22px;
+        line-height: 27px;
+      }
+    }
+  }
+
+  &__bottom-form {
+    flex: 0 1 500px;
+    background-image: url(../images/form-bg.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
+    padding: 20px 44px;
+    border-radius: 15px;
+    border-right: 19px solid #910000;
+    background-color: #090909;
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-weight: 700;
+      font-size: 24px;
+      font-family: "GolosText";
+      @include adaptiveValue("font-size", 24, 16, 1);
+      @include adaptiveValue("line-height", 29, 20, 1);
+    }
+  }
+}
